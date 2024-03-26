@@ -1,0 +1,3 @@
+# WezTerm config
+
+meow
