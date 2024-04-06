@@ -1,14 +1,23 @@
 local wezterm = require("wezterm")
+local mux = wezterm.mux
 local config = {}
 
-config.color_scheme = "Default (dark) (terminal.sexy)"
+config.color_scheme = "Tokyo Night Moon"
 config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Regular" })
 config.font_size = 16
 config.window_background_image = wezterm.home_dir .. "/.config/wezterm/catto.png"
+config.window_background_opacity = 0.9
+
 config.enable_tab_bar = false
 config.native_macos_fullscreen_mode = true
 config.max_fps = 120
 config.disable_default_key_bindings = true
+
+wezterm.on("gui-startup", function()
+	local _, pane, window = mux.spawn_window({})
+	local gui_window = window:gui_window()
+	gui_window:perform_action(wezterm.action.ToggleFullScreen, pane)
+end)
 
 config.keys = {
 	{
