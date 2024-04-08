@@ -5,7 +5,7 @@ local config = {}
 config.color_scheme = "Tokyo Night Moon"
 config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Regular" })
 config.font_size = 16
-config.window_background_image = wezterm.home_dir .. "/.config/wezterm/catto.png"
+-- config.window_background_image = wezterm.home_dir .. "/.config/wezterm/catto.jpg"
 config.window_background_opacity = 0.9
 
 config.enable_tab_bar = false
