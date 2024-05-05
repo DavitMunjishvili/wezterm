@@ -37,11 +37,7 @@ wezterm.on("gui-startup", function()
 end)
 
 config.keys = {
-	{
-		key = "Enter",
-		mods = "CMD",
-		action = wezterm.action.ToggleFullScreen,
-	},
+	{ key = "Enter", mods = "CMD", action = wezterm.action.ToggleFullScreen },
 	{ key = "+", mods = "CMD", action = wezterm.action.IncreaseFontSize },
 	{ key = "-", mods = "CMD", action = wezterm.action.DecreaseFontSize },
 	{ key = "0", mods = "CMD", action = wezterm.action.ResetFontSize },
@@ -51,6 +47,7 @@ config.keys = {
 	{ key = "Tab", mods = "CTRL", action = wezterm.action.ActivateTabRelative(1) },
 	{ key = "c", mods = "CMD|SHIFT", action = wezterm.action.CopyTo("Clipboard") },
 	{ key = "v", mods = "CMD|SHIFT", action = wezterm.action.PasteFrom("Clipboard") },
+	{ key = "f", mods = "CMD", action = wezterm.action.Search({ CaseSensitiveString = "" }) },
 }
 
 config.window_padding = {
