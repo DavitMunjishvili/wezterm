@@ -2,9 +2,9 @@ local wezterm = require("wezterm")
 local mux = wezterm.mux
 local config = {}
 
-config.color_scheme = "Tokyo Night Moon"
+config.color_scheme = "GruvboxDark"
 config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Regular" })
-config.font_size = 16
+config.font_size = 20
 config.macos_window_background_blur = 20
 config.window_background_opacity = 0.3
 config.background = {
@@ -12,7 +12,7 @@ config.background = {
 		source = {
 			File = wezterm.home_dir .. "/.config/wezterm/catto.jpg",
 		},
-		opacity = 0.8,
+		opacity = 1,
 		repeat_x = "NoRepeat",
 		horizontal_align = "Right",
 		vertical_align = "Bottom",
@@ -27,7 +27,6 @@ config.background = {
 config.window_background_image_hsb = {}
 config.enable_tab_bar = false
 config.native_macos_fullscreen_mode = true
-config.max_fps = 120
 config.disable_default_key_bindings = true
 
 wezterm.on("gui-startup", function()
@@ -48,6 +47,14 @@ config.keys = {
 	{ key = "c", mods = "CMD|SHIFT", action = wezterm.action.CopyTo("Clipboard") },
 	{ key = "v", mods = "CMD|SHIFT", action = wezterm.action.PasteFrom("Clipboard") },
 	{ key = "f", mods = "CMD", action = wezterm.action.Search({ CaseSensitiveString = "" }) },
+}
+
+config.mouse_bindings = {
+	{
+		event = { Up = { streak = 1, button = "Left" } },
+		mods = "CMD",
+		action = wezterm.action.OpenLinkAtMouseCursor,
+	},
 }
 
 config.window_padding = {
