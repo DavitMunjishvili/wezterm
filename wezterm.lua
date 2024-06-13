@@ -3,7 +3,11 @@ local mux = wezterm.mux
 local config = {}
 
 config.color_scheme = "GruvboxDark"
-config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Regular" })
+config.font = wezterm.font({
+	family = "JetBrainsMono Nerd Font",
+	weight = "Regular",
+	harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
+})
 config.font_size = 20
 config.macos_window_background_blur = 20
 config.window_background_opacity = 0.3
