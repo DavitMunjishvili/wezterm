@@ -8,7 +8,8 @@ config.font = wezterm.font({
 	weight = "Regular",
 	harfbuzz_features = { "calt=1", "clig=1", "liga=1" },
 })
-config.font_size = 20
+config.font_size = 24
+
 config.macos_window_background_blur = 20
 config.window_background_opacity = 0.3
 config.background = {
