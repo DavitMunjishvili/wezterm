@@ -44,6 +44,8 @@ config.keys = {
 	{ key = "v", mods = "CMD|SHIFT", action = wezterm.action.PasteFrom("Clipboard") },
 	{ key = "f", mods = "CMD", action = wezterm.action.Search({ CaseSensitiveString = "" }) },
 	{ key = "p", mods = "CMD|SHIFT", action = wezterm.action.ActivateCommandPalette },
+	{ key = "h", mods = "CMD", action = wezterm.action.ActivatePaneDirection("Left") },
+	{ key = "l", mods = "CMD", action = wezterm.action.ActivatePaneDirection("Right") },
 }
 
 config.mouse_bindings = {
