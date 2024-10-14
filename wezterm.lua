@@ -39,6 +39,7 @@ config.keys = {
 	{ key = "t", mods = "CMD", action = wezterm.action.SpawnTab("CurrentPaneDomain") },
 	{ key = "w", mods = "CMD", action = wezterm.action.CloseCurrentTab({ confirm = true }) },
 	{ key = "Tab", mods = "CTRL", action = wezterm.action.ActivateTabRelative(1) },
+	{ key = "Tab", mods = "CTRL|SHIFT", action = wezterm.action.ActivateTabRelative(-1) },
 	{ key = "c", mods = "CMD|SHIFT", action = wezterm.action.CopyTo("Clipboard") },
 	{ key = "v", mods = "CMD|SHIFT", action = wezterm.action.PasteFrom("Clipboard") },
 	{ key = "f", mods = "CMD", action = wezterm.action.Search({ CaseSensitiveString = "" }) },
