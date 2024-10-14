@@ -46,6 +46,13 @@ config.keys = {
 	{ key = "p", mods = "CMD|SHIFT", action = wezterm.action.ActivateCommandPalette },
 	{ key = "h", mods = "CMD", action = wezterm.action.ActivatePaneDirection("Left") },
 	{ key = "l", mods = "CMD", action = wezterm.action.ActivatePaneDirection("Right") },
+	{
+		key = "w",
+		mods = "CMD|SHIFT",
+		action = wezterm.action.ShowLauncherArgs({
+			flags = "FUZZY|WORKSPACES",
+		}),
+	},
 }
 
 config.mouse_bindings = {
