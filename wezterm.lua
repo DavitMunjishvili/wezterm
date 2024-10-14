@@ -11,23 +11,6 @@ config.font = wezterm.font({
 config.font_size = 24
 
 config.macos_window_background_blur = 20
-config.window_background_opacity = 0.3
-config.background = {
-	{
-		source = {
-			File = wezterm.home_dir .. "/.config/wezterm/catto.jpg",
-		},
-		opacity = 1,
-		repeat_x = "NoRepeat",
-		horizontal_align = "Right",
-		vertical_align = "Bottom",
-		hsb = {
-			brightness = 0.5,
-			hue = 1.0,
-			saturation = 1.0,
-		},
-	},
-}
 
 config.window_background_image_hsb = {}
 config.enable_tab_bar = false
